@@ -39,7 +39,9 @@ def scrape_indeed(keyword, location=""):
                 title = title_element.text.strip()
                 company = company_element.text.strip()
                 location = location_element.text.strip()
-                link = "https://www.indeed.com" + link_element["href"]
+                href = "https://www.indeed.com" + link_element["href"]
+
+
                 listings.append({
                     "title": title,
                     "company": company,
